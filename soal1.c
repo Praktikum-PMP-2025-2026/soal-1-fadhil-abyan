@@ -92,8 +92,11 @@
     printf("RECOVERED ");
     int sum = 0;
     for(int i = 0; i < n; i++){
-        printf("%d ", arr[i]);
+        printf("%d", arr[i]);
         sum = sum + arr[i];
+        if(i != n-1){
+            printf(" ");
+        }
     }
     printf("\n");
     printf("MAX_SUM %d\n", sum);
