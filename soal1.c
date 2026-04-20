@@ -96,7 +96,7 @@
         sum = sum + arr[i];
     }
     printf("\n");
-    printf("MAX_SUM : %d\n", sum);
+    printf("MAX_SUM %d\n", sum);
 
     return 0;
  }
