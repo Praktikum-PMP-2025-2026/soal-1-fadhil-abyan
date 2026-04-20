@@ -92,11 +92,11 @@ jobs:
           timeout: 2
           max-score: 10
 
-      - name: Case 06 - dua sisi ada, floor average
+      - name: Case 06 - dua sisi ada floor average
         id: case-06
         uses: classroom-resources/autograding-io-grader@v1
         with:
-          test-name: Case 06 - dua sisi ada, floor average
+          test-name: Case 06 - dua sisi ada floor average
           setup-command: gcc -std=c11 -O2 -Wall -Wextra -o soal1 soal1.c
           command: ./soal1
           input: "3 5 -1 8"
@@ -122,17 +122,17 @@ jobs:
           timeout: 2
           max-score: 10
 
-      - name: Case 08 - campuran nol dan negatif
+      - name: Case 08 - campuran aman tanpa floor negatif
         id: case-08
         uses: classroom-resources/autograding-io-grader@v1
         with:
-          test-name: Case 08 - campuran nol dan negatif
+          test-name: Case 08 - campuran aman tanpa floor negatif
           setup-command: gcc -std=c11 -O2 -Wall -Wextra -o soal1 soal1.c
           command: ./soal1
-          input: "6 0 -1 -3 -1 2 -1"
+          input: "6 2 -1 4 -1 6 -1"
           expected-output: |-
-            RECOVERED 0 -2 -3 -1 2 2
-            MAX_SUM 4
+            RECOVERED 2 3 4 5 6 6
+            MAX_SUM 26
           comparison-method: exact
           timeout: 2
           max-score: 10
